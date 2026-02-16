@@ -17,7 +17,7 @@ var leftt = {0:"75px",1:"200px",2:"170px",3:"0px",4:"-50px"};
 var colors = { 0: "hsl(39, 89%, 49%)", 1: "hsl(230, 89%, 62%)", 2: "hsl(349, 71%, 52%)", 3: "hsl(261, 73%, 60%)", 4: "hsl(189, 59%, 53%)" };
 var shadows = { 0: "inset 0 6px 1px rgb(190, 190, 190), 0 6px 0 #c06d21", 1: "inset 0 6px 1px rgb(190, 190, 190), 0 6px 0 #2944c3", 2: "inset 0 6px 1px rgb(190, 190, 190), 0 6px 0 #9b1533", 3: "inset 0 6px 1px rgb(190, 190, 190), 0 6px 0 #6137a9", 4: "inset 0 6px 1px rgb(190, 190, 190), 0 6px 0 #2c8eac" };
 
-var explain = { 1:"Les ciseaux coupent le papier", 4:"La pierre Ã©crase les ciseaux", 5:"Le papier enveloppe la pierre", 9:"Les ciseaux dÃ©capitent le lÃ©zard", 10:"La lÃ©zard mange le papier", 13:"La pierre Ã©crase le lÃ©zard", 16:"Spock casse les ciseaux", 17:"Spock rÃ©fute le papier", 20:"Spock vaporise la pierre", 25:"Le lÃ©zard empoisonne Spock" };
+var explain = { 1:"Les ciseaux coupent le papier", 4:"La pierre écrase les ciseaux", 5:"Le papier enveloppe la pierre", 9:"Les ciseaux décapitent le lézard", 10:"La lézard mange le papier", 13:"La pierre écrase le lézard", 16:"Spock casse les ciseaux", 17:"Spock réfute le papier", 20:"Spock vaporise la pierre", 25:"Le lézard empoisonne Spock" };
 
 //Init points
 if(!(points>0 || points<0 || points==0)) points=0;
@@ -68,10 +68,10 @@ for (let x = 0; x < 5; x++) {
 		if (cpu_value == (choose + 1) % 5 || cpu_value == (choose + 3) % 5) {
 			victory= 1;
 			points++;
-			result='GagnÃ© <div class="desc">'+explTxt+'</div>';
+			result='Gagné <div class="desc">'+explTxt+'</div>';
         }
         else if (cpu_value == choose) {
-			result="EgalitÃ©"
+			result="Egalité"
 			victory = undefined;
         }
         else {
@@ -152,3 +152,4 @@ function iconInit() {
 document.getElementById('again').onclick = iconInit;
 
 window.onload = function () { iconInit(); rulesload(); }
+
